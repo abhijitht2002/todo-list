@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+}
+.striked span{
+  text-decoration: line-through;
+  color: grey;
+}
+button i{
+  pointer-events: none;
+}
