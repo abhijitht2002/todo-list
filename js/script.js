@@ -3,6 +3,7 @@ const todoInput = document.getElementById('todo-input')
 const todoAddButton = document.getElementById('todo-add')
 const todoList = document.getElementById('todo-list')
 
+// add task
 function addTask(){
 
     let task = todoInput.value
@@ -12,8 +13,9 @@ function addTask(){
         let html = `<li>
                         <input type="checkbox" class="task-check">
                         <span>${task}</span>
-                        <button class="edit-btn"><i class="bi bi-pencil-square"></i></button>
-                        <button class="delete-btn"><i class="bi bi-trash"></i></button>
+                        <i class="bi bi-pencil-square text-primary ms-2 edit-task" role="button"></i>
+                        <div></div> 
+                        <button class="delete-btn"><i class="bi bi-trash3-fill"></i></button>
                     </li>`
         todoList.insertAdjacentHTML('beforeend', html)
         todoInput.value = ""
@@ -25,7 +27,7 @@ todoAddButton.addEventListener('click', addTask)
 
 todoList.addEventListener('click', (event) => {
 
-    const li = event.target.parentElement
+    const li = event.target.closest('li')
     const span = li.querySelector('span')
 
     // delete task
@@ -33,7 +35,7 @@ todoList.addEventListener('click', (event) => {
         li.remove()
     }
     // edit task
-    else if(event.target.classList.contains('edit-btn')){
+    else if(event.target.classList.contains('edit-task')){
         
         const input = document.createElement('input')
         input.type = "text"

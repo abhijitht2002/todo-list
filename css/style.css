@@ -1,10 +1,76 @@
+body {
+  /* background: #f8f9fa; */
+  padding: 40px 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+}
+
+form {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+#todo-input {
+  padding: 5px 10px;
+  flex-grow: 1;
+  font-family: "Roboto Mono", monospace;
+}
+
+.task-check {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  padding: 5px 10px;
+}
+#todo-add {
+  background-color: #8d4ce5;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.delete-btn {
+  background-color: #e34d40;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.edit-btn {
+  background-color: yellow;
+}
+
+button i {
+  pointer-events: none;
+}
+
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.striked span{
+
+ul li {
+  font-family: "Roboto Mono", monospace;
+
+  background-color: #f3f1f4;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+li div {
+  flex-grow: 1;
+}
+
+.striked span {
   text-decoration: line-through;
-  color: grey;
-}
-button i{
-  pointer-events: none;
+  color: #6c757d;
 }
