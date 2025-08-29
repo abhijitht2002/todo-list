@@ -11,11 +11,11 @@ function addTask(){
     if(task.trim() !== ""){
         console.log(task)
         let html = `<li>
-                        <input type="checkbox" class="task-check">
+                        <input type="checkbox" class="task-check" title="strike off task">
                         <span>${task}</span>
-                        <i class="bi bi-pencil-square text-primary ms-2 edit-task" role="button"></i>
+                        <i class="bi bi-pencil-square text-primary ms-2 edit-task" role="button" title="click to edit"></i>
                         <div></div> 
-                        <button class="delete-btn"><i class="bi bi-trash3-fill"></i></button>
+                        <button class="delete-btn" title="delete task"><i class="bi bi-trash3-fill"></i></button>
                     </li>`
         todoList.insertAdjacentHTML('beforeend', html)
         todoInput.value = ""
